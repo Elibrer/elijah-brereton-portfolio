@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #e1e1e1;
+    background: #070d0f;
     display: flex;
     flex-direction: column;
     line-height: 1.3;
@@ -14,20 +14,24 @@ body {
 /*---------------------------Header & Nav------------------------------------*/
 header {
     /* padding: 1%; */
+    position:sticky;
+    top:0;
+    width:100%;
+    border-bottom:2px solid white;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
-    background: #17333E;
+    background: #070d0f;
     color: #e6e6e6;
-    font-family:'Prompt', Arial, Helvetica, sans-serif;
+    font-family:'Prompt', Helvetica, sans-serif;
     list-style: none;
     overflow: hidden;
+
 }
 
 header h1 {
     font-size: 50px;
     text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
-
 }
 
 nav ul {
@@ -49,6 +53,8 @@ nav a {
     color: #e6e6e6;
     font-weight: bold;
     text-decoration: none;
+    
+
 }
 
 a:hover {
@@ -59,20 +65,137 @@ a:hover {
 
 }
 
-/*---------------------------Hero------------------------------------*/
 
-.hero-image {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("assets/images/profile-1.png");
-    background-size: cover;
-    background-position: center;
+/*---------------------------Main------------------------------------*/
+
+
+main {
+    height: 100vh;
+    /* margin-left:15%; */
+    padding:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #070d0f;
+    font-family:'Prompt', Helvetica, sans-serif;
+    list-style: none;
 }
+
+
+/*---------------------------Article------------------------------------*/
+
+.article-style {
+    justify-content: center;
+    align-items: center;
+    /* margin-top:15%; */
+
+}
+
+.article-style h2 {
+    font-size: 6vw;
+    text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
+    color:#e1e1e1
+}
+.article-style h3 {
+    margin-left:30px;
+    margin-right:30px;
+    color: #949494;
+
+    font-size: 3vw;
+    text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
+
+}
+
+/*---------------------------Main Img------------------------------------*/
+
+.display-img {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    
+
+}
+
+.display-img img {
+    width:30vw;
+    border-radius:50%
+}
+
+.card {
+    border-style: solid;
+    padding:50px;
+    border-width: 6px;
+    padding: 10px;
+    margin: 20px;
+    flex: 0 0 100px;
+    overflow:none;
+    border-radius: 50%;
+    color: #e6e6e6;
+
+  }
+
+
+/*---------------------------Showcase------------------------------------*/
+
+.showcase {
+    background-color:#e1e1e1;
+
+    padding:1%;
+    height:100vh;
+    color: #17333E;
+    font-family:'Prompt', Helvetica, sans-serif;
+    width:100%;
+    display: flex;
+    font-size:20px;
+    
+    line-height: 45px;
+    text-shadow: 2px 0 0 #d5d5d5, 0 -1px 0 #d5d5d5, 3px 3px 0 #d5d5d5, -1px 0 0 #d5d5d5;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 1px 3px 0 #000, -1px 0 0 #000;
+
+}
+.showcase h2 {
+    font-size:  6vh;
+    width:100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*---------------------------Media Query / Flexbox------------------------------------*/
 
 @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
+      justify-content: center;
+      align-items: top;
     }
 
+
+    .display-img img {
+        width:70vw;
+    }
+
+
+    main article h2, main article h3 {
+        text-align:center;
+    }
+
+    .article-style h2 {
+        font-size:8vh;
+    }
+
+    .article-style h3 {
+        font-size:4vh;
+    }
+
+    header h1 {
+        display:none;
+    }
   }
