@@ -4,8 +4,14 @@
     margin: 0;
 }
 
+:root {
+  --dark: #070d0f;
+  --light: #e6e6e6;
+  --lightbg: #b0b0b0;
+}
+
 body {
-    background: #070d0f;
+    background: var(--dark);
     display: flex;
     flex-direction: column;
     line-height: 1.3;
@@ -13,7 +19,6 @@ body {
 
 /*---------------------------Header & Nav------------------------------------*/
 header {
-    /* padding: 1%; */
     position:sticky;
     top:0;
     width:100%;
@@ -21,8 +26,8 @@ header {
     display: flex;
     justify-content: right;
     align-items: center;
-    background: #070d0f;
-    color: #e6e6e6;
+    background: var(--dark);
+    color: var(--light);
     font-family:'Prompt', Helvetica, sans-serif;
     list-style: none;
     overflow: hidden;
@@ -50,7 +55,7 @@ nav a {
     display:flex;
     padding:10px;
     height:65px;
-    color: #e6e6e6;
+    color: var(--light);
     font-weight: bold;
     text-decoration: none;
     
@@ -60,65 +65,60 @@ nav a {
 a:hover {
     background-color:#e1e1e1;
     color:#17333E ;
-    text-shadow: 5px 0 0 #e6e6e6, 0 -1px 0 #e6e6e6, 5px 5px 0 #e6e6e6, -1px 0 0 #e6e6e6;
+    text-shadow: 5px 0 0 var(--light), 0 -1px 0 var(--light), 5px 5px 0 var(--light), -1px 0 0 var(--light);
     cursor:pointer;
 
 }
 
 
-/*---------------------------Main------------------------------------*/
+/*---------------------------Home------------------------------------*/
 
 
 main {
     height: 100vh;
     /* margin-left:15%; */
-    padding:50px;
+    padding-top:65px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #070d0f;
+    background: var(--dark);
     font-family:'Prompt', Helvetica, sans-serif;
     list-style: none;
 }
 
 
-/*---------------------------Article------------------------------------*/
+/*---------------------------Home Article------------------------------------*/
 
-.article-style {
+.home-article {
     justify-content: center;
     align-items: center;
-    /* margin-top:15%; */
-
 }
 
-.article-style h2 {
+main article h2 {
     font-size: 6vw;
     text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
     color:#e1e1e1
 }
-.article-style h3 {
+
+main article h3 {
     margin-left:30px;
     margin-right:30px;
     color: #949494;
 
     font-size: 3vw;
     text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
-
 }
 
-/*---------------------------Main Img------------------------------------*/
+/*---------------------------Home Img------------------------------------*/
 
-.display-img {
+.home-img {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
-    
-
 }
 
-.display-img img {
+.home-img img {
     width:30vw;
     border-radius:50%
 }
@@ -132,30 +132,33 @@ main {
     flex: 0 0 100px;
     overflow:none;
     border-radius: 50%;
-    color: #e6e6e6;
-
+    color: var(--light);
   }
 
 
 /*---------------------------Showcase------------------------------------*/
+#showcase-header {
+    height:65px;
+}
+#showcase {
+    padding-top:50px;
+    background-color:var(--lightbg);
+    display: flex;
+    height: calc(100vh - 65px);    
+}
 
 .showcase {
-    background-color:#e1e1e1;
-
-    padding:1%;
-    height:100vh;
-    color: #17333E;
-    font-family:'Prompt', Helvetica, sans-serif;
-    width:100%;
-    display: flex;
-    font-size:20px;
     
-    line-height: 45px;
+    /*----FONT----*/
+    color: var(--dark);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:6vh;
     text-shadow: 2px 0 0 #d5d5d5, 0 -1px 0 #d5d5d5, 3px 3px 0 #d5d5d5, -1px 0 0 #d5d5d5;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 1px 3px 0 #000, -1px 0 0 #000;
+    text-shadow: 1px 0 0 #ffffff, 0 -1px 0 #ffffff, 1px 3px 0 #ffffff, -1px 0 0 #ffffff;
 
 }
-.showcase h2 {
+
+section div h2 {
     font-size:  6vh;
     width:100%;
     text-align: center;
@@ -173,26 +176,28 @@ main {
 @media screen and (max-width: 768px) {
     header, main {
       flex-direction: column;
-      justify-content: center;
-      align-items: top;
+      justify-content: flex-start;
+      align-items: bottom;
     }
 
 
-    .display-img img {
+    .home-img img {
         width:70vw;
     }
 
 
+
     main article h2, main article h3 {
         text-align:center;
+        justify-content: flex-start;
     }
 
-    .article-style h2 {
-        font-size:8vh;
+    .home-article h2 {
+        font-size:8vw;
     }
 
-    .article-style h3 {
-        font-size:4vh;
+    .home-article h3 {
+        font-size:4vw;
     }
 
     header h1 {
