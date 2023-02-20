@@ -5,7 +5,9 @@
 }
 
 :root {
-  --dark: #2d2d2d;
+  --dark: #161616;
+  --darker: #000000;
+  --darkbg: #373737;
   --med: #a8a8a8;
   --meddark: #0bd3d3;
   --oj: #fff568;
@@ -24,6 +26,8 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
+    overflow-x:hidden;
+    overflow-y: overlay;
 }
 
 /*---------------------------Header & Nav------------------------------------*/
@@ -161,7 +165,7 @@ main article h3 {
 
 /*---------------------------Showcase------------------------------------*/
 .showcase {
-    background-color: var(--dark);
+    background-color: var(--darkbg);
     height: calc(100vh - 65px);    
     width:100vw;
     overflow:hidden;
@@ -188,7 +192,7 @@ header.scheader {
     display: grid;
     flex-direction:row;
     margin: 0;
-    grid-template-rows: 44vw 100px;
+    grid-template-rows: 42vw 100px;
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
@@ -326,14 +330,18 @@ input:nth-of-type(5):checked ~ #carousel {
 /*---------------------------About------------------------------------*/
 .about {
     background-color: var(--dark);
-    height: calc(100vh - 65px);    
+    height: calc(100vh - 130px);    
     width:100vw;
     overflow:hidden;
     height:60vw;
+    box-sizing: border-box;
+    display:flex;
+    padding-top: 8vw;
 }
 
 #about-header {
     height:65px;
+    background-color: var(--darkbg);
 }
 
 header.abheader {
@@ -346,11 +354,52 @@ header.abheader {
     width:20vw;
 }
 
+#about-img img{
+    position: absolute;
+    justify-content: center;
+    width:30vw;
+    height:40vw;
+    opacity:.2;
+    margin-left:18%;
+    z-index: 1;
+}
 
+.about article {
+    margin-left:37%;
+    margin-top: 8vw;
+    z-index: 2;
+
+}
+
+#about-article h3{
+    color:var(--white);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:7vw;
+    
+}
+#about-article h4{
+    color:var(--meddark);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:1.2vw;
+    margin-top: -1vw;
+    padding-bottom: 1vw;
+    margin-left:3vw;
+}
+
+#about-article div {
+    
+    /* background-color: var(--darker); */
+    margin-left:-5vw;
+    width:60vw;
+    color:var(--white);
+    font-size: 1.8vw;
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-weight:bolder;
+}
 
 /*---------------------------Contact------------------------------------*/
 .contact {
-    background-color: var(--dark);
+    background-color: var(--darkbg);
     height: calc(100vh - 65px);    
     width:100vw;
     overflow:hidden;
@@ -359,6 +408,7 @@ header.abheader {
 
 #contact-header {
     height:65px;
+    background-color: var(--dark);
 }
 
 header.ctheader {
