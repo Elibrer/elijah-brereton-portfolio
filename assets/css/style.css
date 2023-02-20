@@ -23,7 +23,7 @@ body {
 }
 
 /*---------------------------Header & Nav------------------------------------*/
-header {
+header.nav {
     position:sticky;
     top:0;
     width:100%;
@@ -141,24 +141,36 @@ main article h3 {
     color: var(--light);
   }
 
+.card:hover {
+    transition: all 1s ease-in-out;
+    box-shadow: inset 0px 0px 20px var(--light), 0 0 40px var(--light);
+}
+
+.card:not(:hover) {
+    transition: all 1s ease-out;
+}
 
 /*---------------------------Showcase------------------------------------*/
 .showcase {
     background-color: var(--light);
     height: calc(100vh - 65px);    
     width:100vw;
+    overflow:hidden;
+    height:60vw;
 }
 
 #showcase-header {
     height:65px;
 }
 
-#showcase-title {
-    padding:30px;
+header.scheader {
+    margin: 1vw auto .25vw;
+    padding:.2vw;
     text-align: center;
-    font-size: 50px;
-    /* text-shadow: 2px 0 0 var(--light), 0 -1px 0 var(--light), 2px 2px 0 var(--light), 3px 0 0 var(--dark); */
-    color:var(--med)
+    color:var(--med);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:2vw;
+    width:20vw;
 }
 
 
@@ -167,23 +179,21 @@ main article h3 {
     display: grid;
     flex-direction:row;
     margin: 0;
-    grid-template-rows: 500px 100px;
+    grid-template-rows: 44vw 100px;
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
+    /* height:20vw; */
 }
 
 #carousel {
-
     grid-row: 1 / 2;
     grid-column: 1 / 8;
     width: 100vw;
-    height: 500px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
     perspective: 600px;
     --items: 5;
     --middle: 3;
@@ -193,39 +203,51 @@ main article h3 {
 
 
 #carousel p {
-    padding-bottom:30px;
-    font-size: 40px;
+    font-size: 3vw;
     font-weight: bolder;
     text-shadow: 2px 0 0 var(--dark), 0 -1px 0 var(--dark), 2px 2px 0 var(--dark), 3px 0 0 var(--dark);
     color:var(--light);
 
 }
-#carousel img {
-    height:30vh;
-    width:35vw;
-    border:4px solid var(--light);
-}
+
+
 
 .item {
+    border:1px solid var(--lightbg);
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 5%;
     position: absolute;
-    width: 600px;
-    height: 50vh;
-    background-color: coral;
+    width: 65vw;
+    height: 36.5vw;
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all .5s ease;
-    transform: rotateY(calc(-10deg * var(--r)))
-      translateX(calc(-300px * var(--r)));
+    transform: rotateY(calc(-5deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
     padding:10px;
-
 }
-  
+
+#carousel img {
+    display:inline-block;
+    height: 30vw;
+    width: 60vw;
+    border: 4px solid var(--light);
+}
+
+#carousel:hover,
+.item:hover {
+    box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+}
+
+.item  a {
+    height:100%;
+}
+
+
 .item:nth-of-type(1) {
     --offset: 1;
     background-color: var(--med);
@@ -276,7 +298,7 @@ input:nth-of-type(4) {
     grid-row: 2 / 3;
 }
 input:nth-of-type(4):checked ~ #carousel {
-    --position: 4;
+    --position: 4;s
 }
   
 input:nth-of-type(5) {
@@ -292,29 +314,99 @@ input:nth-of-type(5):checked ~ #carousel {
 
 
 
+/*---------------------------About------------------------------------*/
+.about {
+    background-color: var(--dark);
+    height: calc(100vh - 65px);    
+    width:100vw;
+    overflow:hidden;
+    height:60vw;
+}
 
+#about-header {
+    height:65px;
+}
 
-
-
-
-
-
-
-
-.showcase div h2 {
-    
-    /*----FONT----*/
-    color: var(--dark);
+header.abheader {
+    margin: 1vw auto .25vw;
+    padding:.2vw;
+    text-align: center;
+    color:var(--light);
     font-family:'Prompt', Helvetica, sans-serif;
-    font-size:6vh;
-    text-shadow: 2px 0 0 #d5d5d5, 0 -1px 0 #d5d5d5, 3px 3px 0 #d5d5d5, -1px 0 0 #d5d5d5;
-    text-shadow: 1px 0 0 #ffffff, 0 -1px 0 #ffffff, 1px 3px 0 #ffffff, -1px 0 0 #ffffff;
+    font-size:2vw;
+    width:20vw;
+}
+
+
+
+/*---------------------------Contact------------------------------------*/
+.contact {
+    background-color: var(--light);
+    height: calc(100vh - 65px);    
+    width:100vw;
+    overflow:hidden;
+    height:60vw;
+}
+
+#contact-header {
+    height:65px;
+}
+
+header.ctheader {
+    margin: 1vw auto .25vw;
+    padding:.2vw;
+    text-align: center;
+    color:var(--med);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:2vw;
+    width:20vw;
+}
+
+.ctcards {
+    display:flex;
+    justify-content: space-evenly;
 
 }
 
-section div h2 {
-    font-size:  6vh;
+#contact-card {
+    display: relative;
+    justify-content: center;
+    height:33vw;
+    width:33vw;
+    border: 30px solid white;
+    color:var(--med);
 }
+
+
+#contact-card h3 {
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:2vw;
+    width:20vw;
+}
+
+#contact-card h3:before{
+    content: "Hello";
+}
+
+#contact-card li {
+    color:var(--med);
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:1.5vw;
+    text-align: left;
+    padding: 1vw;
+}
+
+#input-card {
+    display:relative;
+    height:33vw;
+    width:33vw;
+    border: 30px solid white;
+    padding:1vw;
+}
+
+
+
+
 
 
 

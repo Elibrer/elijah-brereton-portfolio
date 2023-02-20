@@ -12,14 +12,14 @@
 
 <body>
 
-    <header>
+    <header class="nav">
         <h1>|</h1>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#showcase-header">Showcase</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about-header">About</a></li>
+            <li><a href="#contact-header">Contact</a></li>
           </ul>
         </nav>
     </header>
@@ -41,45 +41,100 @@
     </main>
     
     <div id="showcase-header"></div>
- 
-
-
     <section class="showcase">
-        <div>
-            <h2 id="showcase-title">Showcase</h2>
-        </div>
+
+        <header class="scheader">
+            <h2>Showcase</h2>
+        </header>
 
 
-        <div class="carousel ">
+        <section class="carousel ">
             <input type="radio" name="position" checked />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
 
-            <div id="carousel">
+            <article id="carousel">
                 <div class="item">
-                    <p>This Portfolio!</p>
-                    <img src="./assets/images/portfolio.png">
+                    <p>Elijah Brereton's Portfolio</p>
+                    
+                    <a href="https://www.google.com/">
+                        <img src="./assets/images/portfolio.png" alt="Elijah's Portfolio landing page with image of Elijah">
+                    </a>
+                    
                 </div>
+                           
                 <div class="item">Placeholder</div>
                 <div class="item">Placeholder</div>
                 <div class="item">Placeholder</div>
                 <div class="item">Placeholder</div>
-            <div>
-        </div>
+            <article>
+            </section>
+    </section>
+
+    <div id="about-header"></div>
+    <section class="about">
+        <header class="abheader">
+            <h2>About</h2>
+        </header>
+    </section>
+   
+    <div id="contact-header"></div>
+    <section class="contact">
+        <header class="ctheader">
+            <h2>Contact</h2>
+        </header>
+
+        <section class="ctcards">
+            <div id="contact-card">
+                <h3>Get in touch:</h3>
+                <ul>
+                    
+                    <h4>Elijah Brereton</h4>
+                    <li>Email :<a href = "mailto: eli.brer@gmail.com"> eli.brer@gmail.com</a></li>
+                    <li>Ph. :<a href = "tel:+61423047693">0423 047 693</a></li>
+                </ul>
+            </div>
+
+            <div id="input-card">
+                <p>
+                    <label for="name">Full Name:</label>
+                    <input id="username" type="text" placeholder="First Last" />
+                </p>
+                <p>
+                    <label  for="email">E-mail:</label>
+                    <input id="email" type="text" placeholder="me@example.com" />
+                </p>
+                <p>
+                    <label for="expertise">Gender:</label>
+                    <select id="expertise">
+                      <option selected>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                      <option>Prefer not to say</option>
+                    </select>
+                  </p>
+                  <p>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" placeholder="Enquiry:"></textarea>
+                  </p>
+                  <p>
+                    <input class="checkbox" id="agreement" type="checkbox" />
+                    <label for="agreement">I agree to share my e-mail address with The CSS Blog</label>
+                  </p>
+                  <p>
+                    <button>Submit</button>
+                  </p>
+            </div>
+
+            
 
 
-        
-        
 
+        </section>
 
-        <div class="showcase-card">
-            <egg>
-                <p>Egg</p>
-            </egg>
-
-        </div>
+      
 
 
 
@@ -87,23 +142,9 @@
 
     </section>
 
-    
-    
+    <footer>
 
-
-
-    <main>
-
-
-    </main>
-
-
-    </nav>
-
-    <article>
-
-
-    </article>
+    </footer>
 
 </body>
 
