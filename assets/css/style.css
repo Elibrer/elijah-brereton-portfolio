@@ -5,13 +5,16 @@
 }
 
 :root {
-  --dark: #070e0e;
-  --med: #0F3D3E;
-  --light: #E2DCC8;
+  --dark: #2d2d2d;
+  --med: #a8a8a8;
+  --meddark: #0bd3d3;
+  --light: #d0d0d0;
   /* --light: #e6e6e6; */
   --lightbg: #F1F1F1;
   /* --lightbg: #b0b0b0; */
   --medcar:#223647;
+  --black:#0d0d0d;
+  --white:#e0e0e0;
 
 }
 
@@ -23,16 +26,16 @@ body {
 }
 
 /*---------------------------Header & Nav------------------------------------*/
-header.nav {
+header.nav-bar {
     position:sticky;
     top:0;
     width:100%;
-    border-bottom:2px solid white;
+    border-bottom:2px solid var(--meddark);
     display: flex;
     justify-content: right;
     align-items: center;
-    background: var(--med);
-    color: var(--light);
+    background: var(--dark);
+    color: var(--meddark);
     font-family:'Prompt', Helvetica, sans-serif;
     list-style: none;
     overflow: hidden;
@@ -46,7 +49,7 @@ header h1 {
     text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
 }
 
-nav ul {
+.nav-bar ul {
     display: flex;
     justify-content: space-between;
     font-size:20px;
@@ -58,21 +61,22 @@ nav ul {
 
 }
 
-nav a {
+.nav-bar ul li a {
     display:flex;
     padding:10px;
     height:65px;
-    color: var(--light);
+    color: var(--med);
     font-weight: bold;
     text-decoration: none;
-    
-
 }
 
+
+
+
 a:hover {
-    background-color:#e1e1e1;
-    color:#17333E ;
-    text-shadow: 5px 0 0 var(--light), 0 -1px 0 var(--light), 5px 5px 0 var(--light), -1px 0 0 var(--light);
+    background-color:var(--med);
+    color: var(--med) ;
+    text-shadow: 5px 0 0 var(--dark), 0 -1px 0 var(--dark), 5px 5px 0 var(--dark), -1px 0 0 var(--dark);
     cursor:pointer;
 
 }
@@ -103,17 +107,24 @@ main {
 
 main article h2 {
     font-size: 6vw;
-    /* text-shadow: 7px 0 0 var(--med), 8px 0 0 var(--light), -1px -1px 0 black, -1px 0 0 black; */
-    color:var(--light);
+    /* text-shadow: 7px 0 0 var(--light), 8px 0 0 var(--light), 9px -1px 0 var(--meddark), 9px 1px 0 var(--meddark); */
+    color:var(--white);
+    text-decoration: underline;
+    text-decoration-color: var(--meddark);
 }
 
 main article h3 {
     margin-left:30px;
     margin-right:30px;
-    color: var(--light);
+    color: var(--white);
+    font-style: italic;
 
     font-size: 3vw;
-    /* text-shadow: 3px 0 0 var(--light), 4px 0 0 var(--med), 3px 1px 0 var(--light), -1px 0 0 black; */
+    /* text-shadow: 3px 0 0 var(--meddark), 4px 0 0 var(--med), 3px 1px 0 var(--meddark), -1px 0 0 black; */
+}
+
+.home-article h2::first-letter {
+    color:var(--meddark);
 }
 
 /*---------------------------Home Img------------------------------------*/
@@ -129,7 +140,9 @@ main article h3 {
     width:30vw;
     border-radius:50%
 }
-
+.card:not(:hover) {
+    transition: all 1s ease-out;
+}
 .card {
     border-style: solid;
     padding:50px;
@@ -138,21 +151,19 @@ main article h3 {
     margin: 20px;
     flex: 0 0 100px;
     border-radius: 50%;
-    color: var(--light);
+    color: var(--meddark);
   }
 
 .card:hover {
     transition: all 1s ease-in-out;
-    box-shadow: inset 0px 0px 20px var(--light), 0 0 40px var(--light);
+    box-shadow: inset 0px 0px 20px var(--med), 0 0 40px var(--med);
 }
 
-.card:not(:hover) {
-    transition: all 1s ease-out;
-}
+
 
 /*---------------------------Showcase------------------------------------*/
 .showcase {
-    background-color: var(--light);
+    background-color: var(--dark);
     height: calc(100vh - 65px);    
     width:100vw;
     overflow:hidden;
@@ -206,7 +217,7 @@ header.scheader {
     font-size: 3vw;
     font-weight: bolder;
     text-shadow: 2px 0 0 var(--dark), 0 -1px 0 var(--dark), 2px 2px 0 var(--dark), 3px 0 0 var(--dark);
-    color:var(--light);
+    color:var(--meddark);
 
 }
 
@@ -235,12 +246,12 @@ header.scheader {
     display:inline-block;
     height: 30vw;
     width: 60vw;
-    border: 4px solid var(--light);
+    border: 4px solid var(--meddark);
 }
 
 #carousel:hover,
 .item:hover {
-    box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+    box-shadow: inset 0px 0px 8px var(--meddark), 0 0 15px var(--meddark);
 }
 
 .item  a {
@@ -331,7 +342,7 @@ header.abheader {
     margin: 1vw auto .25vw;
     padding:.2vw;
     text-align: center;
-    color:var(--light);
+    color:var(--meddark);
     font-family:'Prompt', Helvetica, sans-serif;
     font-size:2vw;
     width:20vw;
@@ -341,7 +352,7 @@ header.abheader {
 
 /*---------------------------Contact------------------------------------*/
 .contact {
-    background-color: var(--light);
+    background-color: var(--meddark);
     height: calc(100vh - 65px);    
     width:100vw;
     overflow:hidden;
