@@ -215,7 +215,7 @@ header.scheader {
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex: 1 0 100%;
+    /* flex: 1 0 100%; */
     padding: 1.5rem;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
@@ -223,6 +223,8 @@ header.scheader {
     flex-basis: 40vw;
     flex-grow: 0;
     flex-shrink: 0;
+    min-height: 40vw;
+    
 }
 
 .showcase-cards:first-child {
@@ -235,10 +237,10 @@ header.scheader {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 2rem;
     color: var(--meddark);
-    flex-grow:1;
+    flex-grow:0;
     outline: 2px dashed var(--white);
     outline-offset: -2px;
     /* transition: all 0.5s ease-in-out; */
@@ -258,7 +260,7 @@ header.scheader {
 
 .sc-image img {
     width:100%;
-    object-fit:cover;
+    object-fit:fill;
 }
 
 
@@ -328,6 +330,24 @@ header.abheader {
 }
 
 /*---------------------------Contact------------------------------------*/
+h5 {
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:1.5vw;
+    color:var(--white);
+    font-weight: 400;
+    margin: 0 5px;
+
+}
+h6 {
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:.6vw;
+    color:var(--med);
+    font-weight: 100;
+    margin: 0 5px;
+
+}
+
+
 .contact {
     background-color: var(--darkbg);
     height: calc(100vh - 65px);    
@@ -368,10 +388,6 @@ header.ctheader {
     width:20vw;
 }
 
-#contact-card h3:before{
-    content: "Hello";
-}
-
 #contact-card li {
     color:var(--med);
     font-family:'Prompt', Helvetica, sans-serif;
@@ -380,26 +396,74 @@ header.ctheader {
     padding: 1vw;
 }
 
-#input-card {
-    display:flex;
+
+
+
+
+
+
+/*-----------------------------------------------*/
+
+#input-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     height:33vw;
     width:33vw;
-    border: 30px solid white;
+    border: 1vw solid white;
     padding:1vw;
+    border-radius: 5px;
 }
 
-.indv-inputs {
+.input-types {
+    width:100%;
+}
+
+.inputs {
     display: flex;
-}
+    flex-grow:1;
 
-
-#first-name, #last-name {
+    flex-wrap:wrap;
     position: relative;
-    width: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+
+.input-style {
+    flex-grow:1;
+    margin: 0 5px;
+}
+
+
+input[type=text], input[type=phone], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid var(--white);
+}
+  
+/* input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+  
+/* input[type=submit]:hover {
+    background-color: #45a049;
+} */
+
 
 /*---------------------------Media Query / Flexbox------------------------------------*/
 
@@ -415,11 +479,11 @@ header.ctheader {
     }
 
     .showcase-items {
-        flex-direction: column;
+        /* flex-direction: column; */
         
     }
     .showcase-cards {
-        flex-basis: 40vw;
+        flex-basis: 5vw;
         flex-grow: 0;
         flex-shrink: 0;
     }

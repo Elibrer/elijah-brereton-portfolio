@@ -123,17 +123,35 @@
                 </ul>
             </div>
 
-            <section id="input-card">
-                <figure class="indv-inputs">
+            <section id="input-container">
+                <figure class="input-types">
                     <h5>Name*</h5>
-                    <label for="first-name"></label>
-                    <input id="first-name" type="text" placeholder="First" />
-                    <label for="last-name"></label>
-                    <input id="last-name" type="text" placeholder="Last" />
+                    <article class="inputs">
+                        <div class="input-style">
+                            <label for="first-name"></label>
+                            <input id="first-name" type="text"/>
+                            <h6>First Name</h6>
+                        </div>
+                        <div class="input-style">
+                            <label for="last-name"></label>
+                            <input id="last-name" type="text"/>
+                            <h6>Last Name</h6>
+                        </div>
+                    </article>
                 </figure>
-                <figure>
-                    <label  for="email">E-mail:</label>
-                    <input id="email" type="text" placeholder="me@example.com" />
+                <figure class="input-types">
+                    <h5>E-mail*</h5>
+                    <div class="input-style">
+                        <label  for="email"></label>
+                        <input id="email" type="text" />
+                    </div>
+                </figure>
+                <figure class="input-types">
+                    <h5>Phone*</h5>
+                    <div class="input-style">
+                        <label  for="phone"></label>
+                        <input id="phone" type="text" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" />
+                    </div>
                 </figure>
                 <figure>
                     <label for="expertise">Gender:</label>
@@ -150,10 +168,10 @@
                 </figure>
                 <figure>
                     <input class="checkbox" id="agreement" type="checkbox" />
-                    <label for="agreement">I agree to share my e-mail address with The CSS Blog</label>
+                    <label for="agreement">I agree to share my e-mail address with EBDev</label>
                 </figure>
                 <figure>
-                    <button>Submit</button>
+                    <input type="submit" value="Submit">
                 </figure>
             </section>
         </article>
