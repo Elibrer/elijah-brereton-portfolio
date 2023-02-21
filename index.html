@@ -12,14 +12,16 @@
 
 <body>
 
+    <a class="anchor" id="home-anchor"></a>
+
     <header class="nav-bar">
         <!-- <h1>|</h1> -->
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#showcase">Showcase</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact-header">Contact</a></li>
+            <li><a href="#home-anchor">Home</a></li>
+            <li><a href="#showcase-anchor">Showcase</a></li>
+            <li><a href="#about-anchor">About</a></li>
+            <li><a href="#contact-anchor">Contact</a></li>
           </ul>
         </nav>
     </header>
@@ -40,7 +42,8 @@
 
     </main>
     
-    
+    <a class="anchor" id="showcase-anchor"></a>
+
     <section class="showcase" id="showcase">
 
         <header class="scheader">
@@ -52,36 +55,34 @@
             <div class="showcase-cards">
                 <figure class="item sc-image">
                     <h2>Elijah Brereton's Portfolio</h2>
-                    <a href="https://www.google.com/"><img src="./assets/images/portfolio.png" alt="Elijah's Portfolio landing page with image of Elijah"></a>
+                    <a href="https://elibrer.github.io/elijah-brereton-portfolio/"><img src="./assets/images/portfolio.png" alt="Elijah's Portfolio landing page with image of Elijah"></a>
 
                 </figure>        
             </div>
             <div class="showcase-cards">
                 <figure class="item sc-image">
                     <h2>CSS Cheatsheet</h2>
-                    <a><img src="./assets/images/css-cheatsheet.png" alt="Placeholder"></a>
+                    <a href="https://elibrer.github.io/css-cheatsheet/"><img src="./assets/images/css-cheatsheet.png" alt="Placeholder"></a>
                 </figure>    
             </div>
             <div class="showcase-cards">
-                <figure class="item">Placeholder</figure>
+                <figure class="item sc-image">
+                    <h2>Placeholder</h2>
+                    <a href=""><img src="./assets/images/placeholder-landscape.png" alt="Placeholder"></a>
+                </figure>    
             </div>
             <div class="showcase-cards">
-                <figure class="item">Placeholder</figure>
-            </div>
-            <div class="showcase-cards">
-                <figure class="item">Placeholder</figure>
-            </div>
-            <div class="showcase-cards">
-                <figure class="item">Placeholder</figure>
+                <figure class="item sc-image">
+                    <h2>Placeholder</h2>
+                    <a href=""><img src="./assets/images/placeholder-landscape.png" alt="Placeholder"></a>
+                </figure>    
             </div>
                 
             
         </section>
     </section>
 
-
-
-
+    <a class="anchor" id="about-anchor"></a>
 
     <section class="about" id="about">
         <aside id="about-img">
@@ -93,7 +94,7 @@
             <h4>Front End | HTML & CSS</h4>
             <div>
                 <p>
-                    I'm Eli, a software developer based in Sydney specialising in HTML & CSS. 
+                    I'm Eli, a <span style="font-size: .6vw;" >(student)</span> software developer based in Sydney specialising in HTML & CSS. 
                     I'm passionate about learning, and I believe that increasing my knowledge 
                     and skills provides me with the tools to give my clients the best possible service. 
                     Fill out the form below if you'd like to get in contact with me.
@@ -102,10 +103,8 @@
 
         </article>
     </section>
-   
 
-
-
+    <a class="anchor" id="contact-anchor"></a>
 
     <div id="contact-header"></div>
     <section class="contact">
@@ -113,7 +112,7 @@
             <h2>Contact</h2>
         </header>
 
-        <section class="ctcards">
+        <article class="ctcards">
             <div id="contact-card">
                 <h3>Get in touch:</h3>
                 <ul>
@@ -124,16 +123,19 @@
                 </ul>
             </div>
 
-            <div id="input-card">
-                <p>
-                    <label for="name">Full Name:</label>
-                    <input id="username" type="text" placeholder="First Last" />
-                </p>
-                <p>
+            <section id="input-card">
+                <figure class="indv-inputs">
+                    <h5>Name*</h5>
+                    <label for="first-name"></label>
+                    <input id="first-name" type="text" placeholder="First" />
+                    <label for="last-name"></label>
+                    <input id="last-name" type="text" placeholder="Last" />
+                </figure>
+                <figure>
                     <label  for="email">E-mail:</label>
                     <input id="email" type="text" placeholder="me@example.com" />
-                </p>
-                <p>
+                </figure>
+                <figure>
                     <label for="expertise">Gender:</label>
                     <select id="expertise">
                       <option selected>Male</option>
@@ -141,32 +143,20 @@
                       <option>Other</option>
                       <option>Prefer not to say</option>
                     </select>
-                  </p>
-                  <p>
+                </figure>
+                <figure>
                     <label for="comment">Comment:</label>
                     <textarea id="comment" placeholder="Enquiry:"></textarea>
-                  </p>
-                  <p>
+                </figure>
+                <figure>
                     <input class="checkbox" id="agreement" type="checkbox" />
                     <label for="agreement">I agree to share my e-mail address with The CSS Blog</label>
-                  </p>
-                  <p>
+                </figure>
+                <figure>
                     <button>Submit</button>
-                  </p>
-            </div>
-
-            
-
-
-
-        </section>
-
-      
-
-
-
-
-
+                </figure>
+            </section>
+        </article>
     </section>
 
     <footer>
