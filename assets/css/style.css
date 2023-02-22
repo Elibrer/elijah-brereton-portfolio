@@ -214,12 +214,12 @@ header.scheader {
 .showcase-cards {
     display:flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row;4
     /* flex: 1 0 100%; */
     padding: 1.5rem;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
-    
+    margin-top:1.5rem;
     flex-basis: 40vw;
     flex-grow: 0;
     flex-shrink: 0;
@@ -329,10 +329,12 @@ header.abheader {
     font-weight:bolder;
 }
 
+
+
 /*---------------------------Contact------------------------------------*/
 h5 {
     font-family:'Prompt', Helvetica, sans-serif;
-    font-size:1.5vw;
+    font-size:25px;
     color:var(--white);
     font-weight: 400;
     margin: 0 5px;
@@ -340,12 +342,13 @@ h5 {
 }
 h6 {
     font-family:'Prompt', Helvetica, sans-serif;
-    font-size:.6vw;
+    font-size:15px;
     color:var(--med);
-    font-weight: 100;
+    font-weight: 200;
     margin: 0 5px;
 
 }
+
 
 
 .contact {
@@ -353,8 +356,10 @@ h6 {
     height: calc(100vh - 65px);    
     width:100vw;
     overflow:hidden;
-    height:60vw;
+    height: auto;
 }
+
+
 
 header.ctheader {
     margin: 1vw auto .25vw;
@@ -368,41 +373,60 @@ header.ctheader {
 
 .ctcards {
     display:flex;
-    justify-content: space-evenly;
-
+    justify-content: space-around;
+    flex-direction: row;
 }
+
+/*------------------Contact Details---------------------*/
 
 #contact-card {
-    display: relative;
+    display: flex;
     justify-content: center;
-    height:33vw;
-    width:33vw;
-    border: 30px solid white;
+    align-items: center;
+    height:auto;
+    width:40vw;
     color:var(--med);
-}
+    padding: 10px;
 
-
-#contact-card h3 {
-    font-family:'Prompt', Helvetica, sans-serif;
-    font-size:2vw;
-    width:20vw;
-}
-
-#contact-card li {
-    color:var(--med);
-    font-family:'Prompt', Helvetica, sans-serif;
-    font-size:1.5vw;
-    text-align: left;
-    padding: 1vw;
 }
 
 
 
+#contact-card div {
+    width:100%;
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 100;
+}
 
+#contact-card div p:first-child {
+    width:100%;
+    font-weight:900;
+    font-size: 40px;
+}
 
+#contact-card div p {
+    padding:10px;
+}
 
+#contact-card div p a {
+    text-decoration: none;
+}
 
-/*-----------------------------------------------*/
+#contact-card div p a:link, #contact-card div p a:visited {
+    color: var(--white);
+}
+
+li a:link, li a:visited {
+    color: var(--meddark);
+}
+
+li a:hover {
+    transition: all .5s linear;
+    text-shadow: 0 0 20px var(--med);
+}
+
+/*-----------------------Contact - Input------------------------*/
 
 #input-container {
     display: flex;
@@ -410,22 +434,19 @@ header.ctheader {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-start;
-    height:33vw;
-    width:33vw;
-    border: 1vw solid white;
-    padding:1vw;
+    width:50vw;
+    padding:10px;
     border-radius: 5px;
 }
 
 .input-types {
     width:100%;
+
 }
 
 .inputs {
     display: flex;
     flex-grow:1;
-
     flex-wrap:wrap;
     position: relative;
     flex-wrap: wrap;
@@ -434,36 +455,57 @@ header.ctheader {
     align-items: center;
 }
 
-
 .input-style {
     flex-grow:1;
     margin: 0 5px;
 }
 
+span {
+    font-family:'Prompt', Helvetica, sans-serif;
+    font-size:15px;
+    color:var(--med);
+    font-weight: 200;
+    margin: 0 5px;
+}
 
-input[type=text], input[type=phone], select {
+
+input[type=text], input[type=phone], textarea, select {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 10px;
     margin: 8px 0;
     display: block;
     border: 1px solid var(--white);
 }
+
+input[type=text]:hover, input[type=phone]:hover, textarea:hover, select:hover {
+    transition:all 0.5s linear;
+    box-shadow: inset 7px 0 10px var(--light), inset 0 7px 10px var(--light), inset -7px 0 10px var(--light), inset 0 -7px 10px var(--light);
+
+}
+
+input[type=checkbox] {
+    height: 25px;
+    width:25px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--white);
+}
   
-/* input[type=submit] {
+input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: var(--meddark);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-} */
-  
-/* input[type=submit]:hover {
-    background-color: #45a049;
-} */
+}
 
+input[type=submit]:hover {
+    background-color: #057373;
+}
 
 /*---------------------------Media Query / Flexbox------------------------------------*/
 
@@ -478,12 +520,8 @@ input[type=text], input[type=phone], select {
         width:70vw;
     }
 
-    .showcase-items {
-        /* flex-direction: column; */
-        
-    }
     .showcase-cards {
-        flex-basis: 5vw;
+        flex-basis: 40vw;
         flex-grow: 0;
         flex-shrink: 0;
     }
@@ -503,5 +541,47 @@ input[type=text], input[type=phone], select {
 
     header h1 {
         display:none;
+    }
+
+    #contact-card div {
+        width:100%;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+    #contact-card div p:first-child {
+        width:100%;
+        font-weight:900;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ctcards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+    }
+    #contact-card {
+
+        width:auto;
+    }
+
+    #contact-card div {
+        width:100%;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 100;
+        text-align: center;
+
+    }
+
+    #contact-card div p:first-child {
+        width:100%;
+        font-weight:900;
+        font-size: 30px;
+        text-align: center;
     }
   }
