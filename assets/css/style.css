@@ -516,6 +516,10 @@ input[type=submit]:hover {
       align-items: bottom;
     }
 
+    header.nav-bar {
+        height: 7vw;
+    }
+
     .home-img img {
         width:70vw;
     }
@@ -555,15 +559,22 @@ input[type=submit]:hover {
         font-weight:900;
         font-size: 30px;
     }
+
+    
 }
 
 @media screen and (max-width: 576px) {
+    header.nav-bar {
+        height: 10vw;
+    }
+    
     .ctcards {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width:100%;
     }
+
     #contact-card {
 
         width:auto;
@@ -583,5 +594,9 @@ input[type=submit]:hover {
         font-weight:900;
         font-size: 30px;
         text-align: center;
+    }
+
+    #input-container {
+        width: 100%;
     }
   }
