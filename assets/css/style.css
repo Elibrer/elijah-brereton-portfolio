@@ -55,6 +55,7 @@ header.nav-bar {
     align-items: center;
     background: var(--dark);
     font-family:'Prompt', Helvetica, sans-serif;
+    font-weight: 100;
     list-style: none;
     overflow: hidden;
     order:-20;
@@ -64,9 +65,10 @@ header.nav-bar {
 
 }
 
-header h1 {
-    font-size: 50px;
-    text-shadow: 5px 0 0 #000000, 0 -1px 0 black, 5px 5px 0 black, -1px 0 0 black;
+header.nav-bar nav {
+    height:100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar nav ul {
@@ -78,24 +80,29 @@ header h1 {
     margin-left:15px;
     text-shadow: 2px 0 0 #000000, 0 -1px 0 black, 3px 3px 0 black, -1px 0 0 black;
     width:100vw;
+    height:100%;
+    align-items: center;
+
     
 }
 
+
 .nav-bar ul li a {
-    display:relative;
+    display:flex;
     justify-content: space-evenly;
-    padding:10px;
     color: var(--light);
     font-weight: bold;
     text-decoration: none;
+    padding:10px;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover, header nav ul li:hover {
     background-color:var(--med);
-    color: var(--med);
+    color: var(--meddark);
     text-shadow: .1vw 0 0 var(--dark), 0 -.1vw 0 var(--dark), .1vw .1vw 0 var(--dark), -.1vw 0 0 var(--dark);
     cursor:pointer;
-    height:auto;
+    height:100%;
+    align-items: center;
 
 }
 
@@ -357,6 +364,7 @@ h6 {
     width:100vw;
     overflow:hidden;
     height: auto;
+    padding: 3rem 0;
 }
 
 
@@ -393,7 +401,7 @@ header.ctheader {
 
 
 #contact-card div {
-    width:100%;
+    width:auto;
     color: var(--white);
     font-size: 30px;
     font-weight: 100;
@@ -506,6 +514,24 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #057373;
 }
+
+/*-----------------------Footer------------------------*/
+
+footer {
+    background-color: var(--darkbg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:10rem;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+
 
 /*---------------------------Media Query / Flexbox------------------------------------*/
 
