@@ -2,8 +2,8 @@
 Elijah Brereton's Academic and Professional Portfolio.
 
 ![Languages Badge](https://img.shields.io/badge/Languages-2-blue)
-![HTML Badge](https://img.shields.io/badge/HTML-34.8%25-red)
-![CSS Badge](https://img.shields.io/badge/CSS-65.2%25-blueviolet)
+![HTML Badge](https://img.shields.io/badge/HTML-38.6%25-red)
+![CSS Badge](https://img.shields.io/badge/CSS-61.4%25-blueviolet)
 
 ## Description
 
