@@ -18,7 +18,7 @@ I will continue to work on this page as I absorb more and more information throu
 - [Features](#features)
 - [Usage](#usage)
 - [Languages Used](#languages-used)
-- [Full Preview](#full-preview)
+- [Home Page Preview](#full-preview)
 - [Credits](#credits)
 
 ## Features
